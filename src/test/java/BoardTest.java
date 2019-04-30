@@ -2,6 +2,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class BoardTest {
     private static Board b;
@@ -19,6 +20,18 @@ public class BoardTest {
     @Test
     void firstSquareOfBoardShouldBeDepart() {
         assertEquals(b.getSquares().getFirst().getName(), "Départ");
+    }
+
+    @Test
+    void getPieceShouldWork8Times() {
+        try {
+            for (int i = 0; i < 8; i++) {
+                b.getPiece();
+            }
+        }
+        catch(Exception e){
+            fail("pas assez de pieces");
+        }
     }
 
     @Test

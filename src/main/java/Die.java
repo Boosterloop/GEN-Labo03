@@ -5,7 +5,7 @@
  Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary Alison
  Date        : 05.04.2019
 
- But         : Permet de gérer le résultat d'un jet de dés
+ But         : Permet de simuler un dé
 
  Remarque(s) :
 
@@ -21,13 +21,15 @@ public class Die {
     protected final int minFace = 1;
     private int value;
 
-    //Constructeur
+    /**
+     * @brief   : constructeur vide
+     */
     public Die(){
         value = minFace;
     }
 
     /**
-     * @brief   : Lancé les dés
+     * @brief   : change la valeur du dé (entre minFace et maxFace)
      */
     public void roll(){
         value =  minFace + rand.nextInt(maxFace - minFace);

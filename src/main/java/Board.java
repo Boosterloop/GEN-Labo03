@@ -19,18 +19,18 @@ import java.util.*;
 public class Board {
     private LinkedList<Square> squares;
     private final int NB_SQUARES = 40;
-    private List<String> pieces = Arrays.asList("Dés à coudre", "Brouette", "Botte", "Chien",
-                        "Voiture", "Fer à repasser", "Chapeau", "Bateau");
+    private List<String> pieces = new ArrayList<>(Arrays.asList("Dés à coudre", "Brouette", "Botte", "Chien",
+                        "Voiture", "Fer à repasser", "Chapeau", "Bateau"));
     private Random rand = new Random();
 
     //Constructeur
     public Board() {
         squares = new LinkedList<>();
         // Depart
-        squares.add(new Square("Départ"));
+        squares.add(new GoSquare("Départ"));
 
         for(int i = 1; i < NB_SQUARES; i++) {
-            squares.add(new Square("Square " + i));
+            squares.add(new RegularSquare("Square " + i));
         }
     }
 
