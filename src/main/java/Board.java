@@ -27,10 +27,10 @@ public class Board {
     public Board() {
         squares = new LinkedList<>();
         // Depart
-        squares.add(new Square("Départ"));
+        squares.add(new GoSquare("Départ"));
 
         for(int i = 1; i < NB_SQUARES; i++) {
-            squares.add(new Square("Square " + i));
+            squares.add(new RegularSquare("Square " + i));
         }
     }
 

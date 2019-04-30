@@ -13,16 +13,30 @@
  -----------------------------------------------------------------------------------
  */
 
-public class Square {
+abstract public class Square {
     private String name;
 
-    //Constructeur
+    /**
+     * @brief       : constructeur à un paramètre
+     * @param name  : String, nom de la case
+     */
     public Square(String name) {
         this.name = name;
     }
 
-    //Get
+    /**
+     * @brief       : accesseur à name
+     * @return      : String, nom de la case
+     */
     public String getName() {
         return name;
     }
+
+    /**
+     * @brief       : méthode abstraite, les classe enfants utilisent cette méthode pour lancer une action
+     *                lorsqu'un joueur atterit sur la case.
+     * @param p     : Player, joueur qui a atterit sur la case
+     */
+    abstract public void landedOn( Player p);
+
 }
