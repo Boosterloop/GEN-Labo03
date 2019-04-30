@@ -27,6 +27,6 @@ public class GoToJailSquare extends Square{
     }
 
     public void landedOn( Player p){
-        p.seLocation(jail);
+        p.setLocation(jail);
     }
 }

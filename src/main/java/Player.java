@@ -15,17 +15,18 @@
  */
 
 public class Player {
+    private int cash = 1500;
     private String name;
-    private Piece piece;
-    private Die[] die;
+    private Cup cup;
     private Board board;
+    private Square location;
 
     //constructeur
-    public Player(String name, Die[] die, Board board){
+    public Player(String name, Cup cup, Board board){
         this.name = name;
-        this.die = die;
+        this.cup = cup;
         this.board = board;
-        piece = new Piece(this.board.getPiece(), this.board.getStart());
+        location = board.getStart();
     }
 
     //get et set
@@ -37,27 +38,49 @@ public class Player {
         return name;
     }
 
-    public void setPiece(Piece piece) {
-        this.piece = piece;
-    }
-
-    public Piece getPiece() {
-        return piece;
-    }
-
     /**
      * @brief   : Fait jouer le joueur et lançant les deux dés et se déplacer
      */
     public void takeTurn(){
         int fv = 0;
-        for (int i = 0; i < 2; ++i) {
-            die[i].roll();
-            fv += die[i].getFaceValue();
-        }
+        cup.roll();
+        fv = cup.getTotal();
 
-        Square oldLoc = piece.getLocation();
-        Square newLoc = board.getSquare(oldLoc, fv);
-        piece.setLocation(newLoc);
+        Square newLoc = board.getSquare(location, fv);
+
+        location.landedOn(this);
+    }
+
+    /**
+     * @brief           : Met à jour la position du joueur
+     * @param location  : Square ou se trouve le joueur
+     */
+    public void setLocation(Square location) {
+        this.location = location;
+    }
+
+    /**
+     * @brief       : Rajoute de l'argent au joueur
+     * @param cash  : int de la somme à rajouter
+     */
+    public void addCash(int cash){
+        this.cash = cash;
+    }
+
+    /**
+     * @brief       : Réduit la quantité d'argent du joueur
+     * @param cash  : int de la quantité d'argent à enlever
+     */
+    public void reduceCash(int cash){
+        this.cash = cash;
+    }
+
+    /**
+     * @brief   : Permet de savoir combien d'argent possède le joueur
+     * @return  : int de la quantité d'argent
+     */
+    public int getNetWorth(){
+        return cash;
     }
 
     @Override

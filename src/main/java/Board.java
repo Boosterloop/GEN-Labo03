@@ -19,8 +19,6 @@ import java.util.*;
 public class Board {
     private LinkedList<Square> squares;
     private final int NB_SQUARES = 40;
-    private List<String> pieces = new ArrayList<>(Arrays.asList("Dés à coudre", "Brouette", "Botte", "Chien",
-                        "Voiture", "Fer à repasser", "Chapeau", "Bateau"));
     private Random rand = new Random();
 
     //Constructeur
@@ -65,14 +63,4 @@ public class Board {
         return squares.getFirst();
     }
 
-    /**
-     * @brief   : permet de recevoir une pièce du jeu
-     * @return  : String de la pièce
-     */
-    public String getPiece() {
-        int index = rand.nextInt(pieces.size());
-        String piece = pieces.get(index);
-        pieces.remove(piece);
-        return piece;
-    }
 }

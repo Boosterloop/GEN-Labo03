@@ -35,7 +35,7 @@ public class MGame {
         }
 
         for(String name: playersName){
-            //players.add(new Player(name, cup, board));
+            players.add(new Player(name, cup, board));
         }
     }
 
