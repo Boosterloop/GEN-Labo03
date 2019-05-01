@@ -46,7 +46,7 @@ public class Player {
         cup.roll();
         fv = cup.getTotal();
 
-        Square newLoc = board.getSquare(location, fv);
+        location = board.getSquare(location, fv);
 
         location.landedOn(this);
     }
@@ -64,7 +64,7 @@ public class Player {
      * @param cash  : int de la somme à rajouter
      */
     public void addCash(int cash){
-        this.cash = cash;
+        this.cash += cash;
     }
 
     /**
@@ -72,7 +72,7 @@ public class Player {
      * @param cash  : int de la quantité d'argent à enlever
      */
     public void reduceCash(int cash){
-        this.cash = cash;
+        this.cash -= cash;
     }
 
     /**

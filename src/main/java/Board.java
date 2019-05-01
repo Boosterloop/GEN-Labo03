@@ -19,7 +19,6 @@ import java.util.*;
 public class Board {
     private LinkedList<Square> squares;
     private final int NB_SQUARES = 40;
-    private Random rand = new Random();
 
     //Constructeur
     public Board() {
@@ -45,7 +44,6 @@ public class Board {
      */
     public Square getSquare(Square oldLoc, int fv) {
         Iterator iterator = squares.iterator();
-        Square square;
 
         int i = 0;
         while (iterator.hasNext()) {
