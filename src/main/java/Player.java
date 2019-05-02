@@ -73,6 +73,8 @@ public class Player {
      */
     public void reduceCash(int cash){
         this.cash -= cash;
+        if(this.cash < 0)
+            this.cash = 0;
     }
 
     /**
