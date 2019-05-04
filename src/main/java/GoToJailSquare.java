@@ -2,14 +2,11 @@
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
  Fichier     : GoToJailSquare.java
- Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary Alison
+ Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 05.04.2019
 
- But         : case régulière de jeux du board
+ But         : Case Aller en prison du board
 
- Remarque(s) :
-
- Compilateur : MinGW-g++ 6.3.0
  -----------------------------------------------------------------------------------
  */
 
@@ -17,7 +14,7 @@ public class GoToJailSquare extends Square{
     private RegularSquare jail;
 
     /**
-     * @brief       : constructeur à 2 paramètres
+     * Constructeur à 2 paramètres
      * @param name   : String, nom de la case
      * @param jail  : RegularSquare, case prison
      */
@@ -26,6 +23,10 @@ public class GoToJailSquare extends Square{
         this.jail = jail;
     }
 
+    /**
+     * Envoie le joueur en prison
+     * @param p : Player, joueur qui a attérit sur la case
+     */
     public void landedOn( Player p){
         p.setLocation(jail);
     }

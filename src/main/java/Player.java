@@ -2,15 +2,12 @@
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
  Fichier     : Player.java
- Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary Alison
+ Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 05.04.2019
 
- But         : Représente le joueur de la partie avec sa pièce et ses dés et le
- plateau de jeux
+ But         : Représente le joueur de la partie avec sa pièce, ses dés et le
+               plateau de jeu
 
- Remarque(s) :
-
- Compilateur : MinGW-g++ 6.3.0
  -----------------------------------------------------------------------------------
  */
 
@@ -21,7 +18,12 @@ public class Player {
     private Board board;
     private Square location;
 
-    //constructeur
+    /**
+     * Constructeur
+     * @param name  : String, nom du joueur
+     * @param cup   : Cup, dés du joueur
+     * @param board : Board, Plateau de jeu
+     */
     public Player(String name, Cup cup, Board board){
         this.name = name;
         this.cup = cup;
@@ -29,17 +31,24 @@ public class Player {
         location = board.getStart();
     }
 
-    //get et set
+    /**
+     * Setter pour le nom du joueur
+     * @param name : String, nom du joueur
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Getter pour le nom du joueur
+     * @return : String, nom du joueur
+     */
     public String getName() {
         return name;
     }
 
     /**
-     * @brief   : Fait jouer le joueur et lançant les deux dés et se déplacer
+     * Fait jouer le joueur, lançe les deux dés et se déplacer
      */
     public void takeTurn(){
         int fv = 0;
@@ -52,24 +61,24 @@ public class Player {
     }
 
     /**
-     * @brief           : Met à jour la position du joueur
-     * @param location  : Square ou se trouve le joueur
+     * Met à jour la position du joueur
+     * @param location : Square où se trouve le joueur
      */
     public void setLocation(Square location) {
         this.location = location;
     }
 
     /**
-     * @brief       : Rajoute de l'argent au joueur
-     * @param cash  : int de la somme à rajouter
+     * Rajoute de l'argent au joueur
+     * @param cash  : int, somme à rajouter
      */
     public void addCash(int cash){
         this.cash += cash;
     }
 
     /**
-     * @brief       : Réduit la quantité d'argent du joueur
-     * @param cash  : int de la quantité d'argent à enlever
+     * Réduit la quantité d'argent du joueur
+     * @param cash  : int, quantité d'argent à enlever
      */
     public void reduceCash(int cash){
         this.cash -= cash;
@@ -78,8 +87,8 @@ public class Player {
     }
 
     /**
-     * @brief   : Permet de savoir combien d'argent possède le joueur
-     * @return  : int de la quantité d'argent
+     * Permet de savoir combien d'argent possède le joueur
+     * @return  : int, quantité d'argent
      */
     public int getNetWorth(){
         return cash;

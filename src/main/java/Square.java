@@ -2,14 +2,11 @@
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
  Fichier     : Square.java
- Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary Alison
+ Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 05.04.2019
 
- But         : case de jeux du board
+ But         : Classe abstraite pour représenter les cases du board
 
- Remarque(s) :
-
- Compilateur : MinGW-g++ 6.3.0
  -----------------------------------------------------------------------------------
  */
 
@@ -17,7 +14,7 @@ abstract public class Square {
     private String name;
 
     /**
-     * @brief       : constructeur à un paramètre
+     * Constructeur à un paramètre
      * @param name  : String, nom de la case
      */
     public Square(String name) {
@@ -25,7 +22,7 @@ abstract public class Square {
     }
 
     /**
-     * @brief       : accesseur à name
+     * Getter pour name
      * @return      : String, nom de la case
      */
     public String getName() {
@@ -33,9 +30,9 @@ abstract public class Square {
     }
 
     /**
-     * @brief       : méthode abstraite, les classe enfants utilisent cette méthode pour lancer une action
-     *                lorsqu'un joueur atterit sur la case.
-     * @param p     : Player, joueur qui a atterit sur la case
+     * Méthode abstraite, les classes enfants utilisent cette méthode
+     * pour lancer une action lorsqu'un joueur attérit sur la case.
+     * @param p : Player, joueur qui a attérit sur la case
      */
     abstract public void landedOn( Player p);
 

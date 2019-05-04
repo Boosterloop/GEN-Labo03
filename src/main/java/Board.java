@@ -2,14 +2,11 @@
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
  Fichier     : Board.java
- Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary Alison
+ Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 05.04.2019
 
  But         : Représente la board du jeu
 
- Remarque(s) :
-
- Compilateur : MinGW-g++ 6.3.0
  -----------------------------------------------------------------------------------
  */
 
@@ -20,7 +17,9 @@ public class Board {
     private LinkedList<Square> squares;
     private final int NB_SQUARES = 40;
 
-    //Constructeur
+    /**
+     * Constructeur
+     */
     public Board() {
         squares = new LinkedList<>();
         // Depart
@@ -31,16 +30,19 @@ public class Board {
         }
     }
 
-    //getteur pour la case
+    /**
+     * Getter pour squares
+     * @return : LinkedList<Square>, liste des cases
+     */
     public LinkedList<Square> getSquares() {
         return squares;
     }
 
     /**
-     * @brief       : récupère la location selon le déplacement
-     * @param oldLoc: Square qui est l'ancienne location
-     * @param fv    : int du nombre de case pour se déplacer
-     * @return      : Square de la nouvelle location
+     * Récupère la location selon le déplacement
+     * @param oldLoc : Square, l'ancienne location
+     * @param fv     : int, nombre de case pour se déplacer
+     * @return       : Square, nouvelle location
      */
     public Square getSquare(Square oldLoc, int fv) {
         Iterator iterator = squares.iterator();
@@ -56,7 +58,10 @@ public class Board {
         return squares.get((i + fv) % NB_SQUARES);
     }
 
-    //Retourne la location de départ
+    /**
+     * Retourne la case départ
+     * @return : Square, case départ
+     */
     public Square getStart() {
         return squares.getFirst();
     }

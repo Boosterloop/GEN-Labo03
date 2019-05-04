@@ -2,27 +2,28 @@
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
  Fichier     : IncomeTaxSquare.java
- Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary Alison
+ Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 05.04.2019
 
- But         : case régulière de jeux du board
+ But         : Case Impôts du board
 
- Remarque(s) :
-
- Compilateur : MinGW-g++ 6.3.0
  -----------------------------------------------------------------------------------
  */
 
 public class IncomeTaxSquare extends Square{
 
     /**
-     * @brief       : constructeur à 1 paramètre
-     * @param name   : String, nom de la case
+     * Constructeur à 1 paramètre
+     * @param name : String, nom de la case
      */
     public IncomeTaxSquare(String name){
         super(name);
     }
 
+    /**
+     * Paiement des impôts par le joueur
+     * @param p : Player, joueur qui a attérit sur la case
+     */
     public void landedOn( Player p){
         p.reduceCash(Math.min( 200, p.getNetWorth()/10));
     }
