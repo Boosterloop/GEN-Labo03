@@ -1,4 +1,3 @@
-
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,8 +6,17 @@ import java.util.ArrayList;
 
 
 public class DieTest {
-    @Test
-    public void rollShouldGenerateValueBetween1and6(){
+
+    @RepeatedTest(20)
+    void rollShouldGenerateValueBetween1and6(){
+        Die die = new Die();
+        die.roll();
+        assertTrue(die.getFaceValue() >= 1);
+        assertTrue(die.getFaceValue() <= 6);
+    }
+
+   /* @Test
+    void allValuesShouldBeGenerated() {
         List<Integer> values = new ArrayList<Integer>();
         values.add(1);
         values.add(2);
@@ -16,31 +24,21 @@ public class DieTest {
         values.add(4);
         values.add(5);
         values.add(6);
-        Die die = new Die();
-        for( int i = 0; i< 20; i++){
-            die.roll();
-            assertTrue(die.getFaceValue() >= 1);
-            assertTrue(die.getFaceValue() <= 6);
-        }
-/*
-        while( !values.isEmpty()){
-            die.roll();
-            assertTrue(die.getFaceValue() >= 1);
-            assertTrue(die.getFaceValue() <= 6);
 
-            for(int val: values){
-                if( val == die.getFaceValue()){
-                    values.remove(val);
-                }
-            }
+        Die die = new Die();
+
+        while(!values.isEmpty()){
+            die.roll();
+            values.remove((Integer)die.getFaceValue());
         }
-*/
-    }
+
+    }*/
 
     @Test
-    public void valueShouldBeValidAfterConstructor(){
+    void valueShouldBeValidAfterConstructor(){
         Die d = new Die();
-        assertNotNull(d.getFaceValue());
+        assertTrue(d.getFaceValue() >= 1);
+        assertTrue(d.getFaceValue() <= 6);
     }
 
 }
