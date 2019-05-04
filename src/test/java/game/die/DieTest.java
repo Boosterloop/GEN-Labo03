@@ -1,8 +1,7 @@
+package game.die;
+
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.List;
-import java.util.ArrayList;
 
 
 public class DieTest {
@@ -25,11 +24,11 @@ public class DieTest {
         values.add(5);
         values.add(6);
 
-        Die die = new Die();
+        game.game.game.die.Die game.game.game.die = new game.game.game.die.Die();
 
         while(!values.isEmpty()){
-            die.roll();
-            values.remove((Integer)die.getFaceValue());
+            game.game.game.die.roll();
+            values.remove((Integer)game.game.game.die.getFaceValue());
         }
 
     }*/

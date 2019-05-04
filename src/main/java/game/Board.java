@@ -1,7 +1,7 @@
-/*
+package game;/*
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
- Fichier     : Board.java
+ Fichier     : game.Board.java
  Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 05.04.2019
 
@@ -10,6 +10,10 @@
  -----------------------------------------------------------------------------------
  */
 
+
+import game.square.GoSquare;
+import game.square.RegularSquare;
+import game.square.Square;
 
 import java.util.*;
 
@@ -26,13 +30,13 @@ public class Board {
         squares.add(new GoSquare("Départ"));
 
         for(int i = 1; i < NB_SQUARES; i++) {
-            squares.add(new RegularSquare("Square " + i));
+            squares.add(new RegularSquare("game.game.square.Square " + i));
         }
     }
 
     /**
      * Getter pour squares
-     * @return : LinkedList<Square>, liste des cases
+     * @return : LinkedList<game.game.square.Square>, liste des cases
      */
     public LinkedList<Square> getSquares() {
         return squares;
@@ -40,9 +44,9 @@ public class Board {
 
     /**
      * Récupère la location selon le déplacement
-     * @param oldLoc : Square, l'ancienne location
+     * @param oldLoc : game.game.square.Square, l'ancienne location
      * @param fv     : int, nombre de case pour se déplacer
-     * @return       : Square, nouvelle location
+     * @return       : game.game.square.Square, nouvelle location
      */
     public Square getSquare(Square oldLoc, int fv) {
         Iterator iterator = squares.iterator();
@@ -60,7 +64,7 @@ public class Board {
 
     /**
      * Retourne la case départ
-     * @return : Square, case départ
+     * @return : game.game.square.Square, case départ
      */
     public Square getStart() {
         return squares.getFirst();

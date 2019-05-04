@@ -1,7 +1,9 @@
+package game.square;
+import game.Player;
 /*
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
- Fichier     : GoToJailSquare.java
+ Fichier     : game.game.square.GoToJailSquare.java
  Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 05.04.2019
 
@@ -16,7 +18,7 @@ public class GoToJailSquare extends Square{
     /**
      * Constructeur à 2 paramètres
      * @param name   : String, nom de la case
-     * @param jail  : RegularSquare, case prison
+     * @param jail  : game.game.square.RegularSquare, case prison
      */
     public GoToJailSquare(String name, RegularSquare jail){
         super(name);
@@ -25,7 +27,7 @@ public class GoToJailSquare extends Square{
 
     /**
      * Envoie le joueur en prison
-     * @param p : Player, joueur qui a attérit sur la case
+     * @param p : game.Player, joueur qui a attérit sur la case
      */
     public void landedOn( Player p){
         p.setLocation(jail);

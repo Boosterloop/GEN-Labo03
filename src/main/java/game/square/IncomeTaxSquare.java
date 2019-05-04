@@ -1,7 +1,9 @@
+package game.square;
+import game.Player;
 /*
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
- Fichier     : IncomeTaxSquare.java
+ Fichier     : game.game.square.IncomeTaxSquare.java
  Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 05.04.2019
 
@@ -10,7 +12,7 @@
  -----------------------------------------------------------------------------------
  */
 
-public class IncomeTaxSquare extends Square{
+public class IncomeTaxSquare extends Square {
 
     /**
      * Constructeur à 1 paramètre
@@ -22,7 +24,7 @@ public class IncomeTaxSquare extends Square{
 
     /**
      * Paiement des impôts par le joueur
-     * @param p : Player, joueur qui a attérit sur la case
+     * @param p : game.Player, joueur qui a attérit sur la case
      */
     public void landedOn( Player p){
         p.reduceCash(Math.min( 200, p.getNetWorth()/10));

@@ -1,7 +1,7 @@
-/*
+package game.die;/*
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
- Fichier     : Cup.java
+ Fichier     : game.game.game.die.Cup.java
  Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 29.04.2019
 

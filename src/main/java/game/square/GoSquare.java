@@ -1,7 +1,9 @@
+package game.square;
+import game.Player;
 /*
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
- Fichier     : GoSquare.java
+ Fichier     : game.game.square.GoSquare.java
  Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 05.04.2019
 
@@ -22,7 +24,7 @@ public class GoSquare extends Square{
 
     /**
      * Ajoute 200 d'argent au joueur
-     * @param p : Player, joueur qui a attérit sur la case
+     * @param p : game.Player, joueur qui a attérit sur la case
      */
     public void landedOn( Player p){
         p.addCash(200);

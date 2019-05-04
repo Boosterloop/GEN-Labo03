@@ -1,7 +1,7 @@
-/*
+package game;/*
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
- Fichier     : Player.java
+ Fichier     : game.Player.java
  Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 05.04.2019
 
@@ -10,6 +10,9 @@
 
  -----------------------------------------------------------------------------------
  */
+
+import game.die.Cup;
+import game.square.Square;
 
 public class Player {
     private int cash = 1500;
@@ -21,8 +24,8 @@ public class Player {
     /**
      * Constructeur
      * @param name  : String, nom du joueur
-     * @param cup   : Cup, dés du joueur
-     * @param board : Board, Plateau de jeu
+     * @param cup   : game.game.game.die.Cup, dés du joueur
+     * @param board : game.Board, Plateau de jeu
      */
     public Player(String name, Cup cup, Board board){
         this.name = name;
@@ -62,7 +65,7 @@ public class Player {
 
     /**
      * Met à jour la position du joueur
-     * @param location : Square où se trouve le joueur
+     * @param location : game.game.square.Square où se trouve le joueur
      */
     public void setLocation(Square location) {
         this.location = location;

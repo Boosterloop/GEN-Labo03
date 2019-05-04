@@ -1,7 +1,9 @@
+package game.square;
+import game.Player;
 /*
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
- Fichier     : RegularSquare.java
+ Fichier     : game.game.square.RegularSquare.java
  Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 05.04.2019
 
@@ -22,7 +24,7 @@ public class RegularSquare extends Square{
 
     /**
      * Action à faire quand le joueur arrive sur la case, ici rien
-     * @param p     : Player, joueur qui a attérit sur la case
+     * @param p     : game.Player, joueur qui a attérit sur la case
      */
     public void landedOn( Player p){
         //nothing

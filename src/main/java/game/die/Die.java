@@ -1,7 +1,7 @@
-/*
+package game.die;/*
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
- Fichier     : Die.java
+ Fichier     : game.game.game.die.Die.java
  Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 05.04.2019
 

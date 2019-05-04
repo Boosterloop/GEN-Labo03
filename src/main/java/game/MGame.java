@@ -1,13 +1,15 @@
-/*
+package game;/*
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
- Fichier     : MGame.java
+ Fichier     : game.MGame.java
  Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 05.04.2019
  But         : Classe créant la partie
 
  -----------------------------------------------------------------------------------
  */
+import game.die.Cup;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +22,7 @@ public class MGame {
     /**
      * Constructeur à 1 paramètre
      * @param playersName   : Liste des noms des joueurs
-     * @throws Exception    : S'il n'y a pas entre 2 et 8 noms ou si la classe Player
+     * @throws Exception    : S'il n'y a pas entre 2 et 8 noms ou si la classe game.Player
      *                        lance une exception
      */
     public MGame(String[] playersName) throws Exception {

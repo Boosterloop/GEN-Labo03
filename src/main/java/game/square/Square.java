@@ -1,7 +1,9 @@
+package game.square;
+import game.Player;
 /*
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
- Fichier     : Square.java
+ Fichier     : game.game.square.Square.java
  Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 05.04.2019
 
@@ -32,8 +34,8 @@ abstract public class Square {
     /**
      * Méthode abstraite, les classes enfants utilisent cette méthode
      * pour lancer une action lorsqu'un joueur attérit sur la case.
-     * @param p : Player, joueur qui a attérit sur la case
+     * @param p : game.Player, joueur qui a attérit sur la case
      */
-    abstract public void landedOn( Player p);
+    abstract public void landedOn(Player p);
 
 }

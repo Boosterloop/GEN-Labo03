@@ -1,5 +1,9 @@
+package game;
+
+import game.Board;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import game.square.Square;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
