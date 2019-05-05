@@ -1,7 +1,5 @@
 package game;
 
-import game.Board;
-import game.Player;
 import game.die.Cup;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
