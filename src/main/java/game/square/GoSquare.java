@@ -15,16 +15,15 @@ import game.Player;
 public class GoSquare extends Square{
 
     /**
-     * Constructeur à 1 paramètre
-     * @param name : String, nom de la case
+     * Constructeur
      */
-    public GoSquare(String name){
-        super(name);
+    public GoSquare(){
+        super("Départ");
     }
 
     /**
      * Ajoute 200 d'argent au joueur
-     * @param p : game.Player, joueur qui a attérit sur la case
+     * @param p : Player, joueur qui a attérit sur la case
      */
     public void landedOn( Player p){
         p.addCash(200);

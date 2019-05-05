@@ -15,18 +15,17 @@ import game.Player;
 public class IncomeTaxSquare extends Square {
 
     /**
-     * Constructeur à 1 paramètre
-     * @param name : String, nom de la case
+     * Constructeur
      */
-    public IncomeTaxSquare(String name){
-        super(name);
+    public IncomeTaxSquare(){
+        super("Impôts sur le revenu");
     }
 
     /**
      * Paiement des impôts par le joueur
-     * @param p : game.Player, joueur qui a attérit sur la case
+     * @param p : Player, joueur qui a attérit sur la case
      */
-    public void landedOn( Player p){
-        p.reduceCash(Math.min( 200, p.getNetWorth()/10));
+    public void landedOn(Player p){
+        p.reduceCash(Math.min(200, p.getNetWorth()/10));
     }
 }

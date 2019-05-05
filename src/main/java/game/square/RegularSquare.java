@@ -16,7 +16,7 @@ public class RegularSquare extends Square{
 
     /**
      * Constructeur à 1 paramètre
-     * @param name   : String, nom de la case
+     * @param name : String, nom de la case
      */
     public RegularSquare(String name){
         super(name);
@@ -24,7 +24,7 @@ public class RegularSquare extends Square{
 
     /**
      * Action à faire quand le joueur arrive sur la case, ici rien
-     * @param p     : game.Player, joueur qui a attérit sur la case
+     * @param p : Player, joueur qui a attérit sur la case
      */
     public void landedOn( Player p){
         //nothing
