@@ -61,6 +61,8 @@ public class Player {
         location = board.getSquare(location, fv);
 
         location.landedOn(this);
+
+        System.out.println(name  + " se déplace de " + fv + " vers la case " +  location.getName());
     }
 
     /**

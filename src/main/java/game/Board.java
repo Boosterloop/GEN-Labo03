@@ -30,13 +30,13 @@ public class Board {
         squares.add(new GoSquare("Départ"));
 
         for(int i = 1; i < NB_SQUARES; i++) {
-            squares.add(new RegularSquare("game.game.square.Square " + i));
+            squares.add(new RegularSquare("Square " + i));
         }
     }
 
     /**
      * Getter pour squares
-     * @return : LinkedList<game.game.square.Square>, liste des cases
+     * @return : LinkedList<Square>, liste des cases
      */
     public LinkedList<Square> getSquares() {
         return squares;
@@ -44,7 +44,7 @@ public class Board {
 
     /**
      * Récupère la location selon le déplacement
-     * @param oldLoc : game.game.square.Square, l'ancienne location
+     * @param oldLoc : Square, l'ancienne location
      * @param fv     : int, nombre de case pour se déplacer
      * @return       : game.game.square.Square, nouvelle location
      */
@@ -64,7 +64,7 @@ public class Board {
 
     /**
      * Retourne la case départ
-     * @return : game.game.square.Square, case départ
+     * @return : Square, case départ
      */
     public Square getStart() {
         return squares.getFirst();
