@@ -11,9 +11,7 @@ package game;/*
  */
 
 
-import game.square.GoSquare;
-import game.square.RegularSquare;
-import game.square.Square;
+import game.square.*;
 
 import java.util.*;
 
@@ -27,10 +25,21 @@ public class Board {
     public Board() {
         squares = new LinkedList<>();
         // Depart
-        squares.add(new GoSquare("Départ"));
+        squares.add(new GoSquare());
 
         for(int i = 1; i < NB_SQUARES; i++) {
-            squares.add(new RegularSquare("Square " + i));
+            if(i == 10) {
+                squares.add(new RegularSquare("Prison"));
+            }
+            else if(i == 4 || i == 38) {
+                squares.add(new IncomeTaxSquare());
+            }
+            else if(i == 30) {
+                squares.add(new GoToJailSquare((RegularSquare)squares.get(10)));
+            }
+            else {
+                squares.add(new RegularSquare("Square " + i));
+            }
         }
     }
 
