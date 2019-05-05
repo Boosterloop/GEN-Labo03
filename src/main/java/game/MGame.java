@@ -1,17 +1,15 @@
-/*
+package game;/*
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
- Fichier     : MGame.java
- Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary Alison
+ Fichier     : game.MGame.java
+ Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 05.04.2019
  But         : Classe créant la partie
 
- Remarque(s) :
-
- Compilateur : MinGW-g++ 6.3.0
- ----
- -------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------
  */
+import game.die.Cup;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,16 +20,17 @@ public class MGame {
     private final int roundCnt = 20;
 
     /**
-     * @brief               : constructeur à un paramètre
-     * @param playersName   : liste des noms de joueurs
-     * @throws Exception    : s'il n'y a pas entree 2 et 8 noms ou si la classe Player lance une exception
+     * Constructeur à 1 paramètre
+     * @param playersName   : Liste des noms des joueurs
+     * @throws Exception    : S'il n'y a pas entre 2 et 8 noms ou si la classe game.Player
+     *                        lance une exception
      */
-    public MGame(String[] playersName) throws Exception{
+    public MGame(String[] playersName) throws Exception {
         if(playersName.length < 2) {
-            throw new Exception("pas assez de joueurs");
+            throw new Exception("Pas assez de joueurs");
         }
         if(playersName.length > 8) {
-            throw new Exception("trop de joueurs");
+            throw new Exception("Trop de joueurs");
         }
 
         for(String name: playersName){
@@ -40,7 +39,7 @@ public class MGame {
     }
 
     /**
-     * @brief               : lance le jeu avec roundCnt tours
+     * Lance le jeu avec roundCnt tours
      */
     public void playGame(){
         for(int i = 0; i < roundCnt; i++){
@@ -49,7 +48,7 @@ public class MGame {
     }
 
     /**
-     * @brief               : joue un tour de jeu
+     * Effectue un tour de jeu
      */
     private void playRound(){
         for(Player player : players){

@@ -1,28 +1,31 @@
+package game.square;
+import game.Player;
 /*
  -----------------------------------------------------------------------------------
  Laboratoire : Labo03
- Fichier     : GoSquare.java
- Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary Alison
+ Fichier     : game.game.square.GoSquare.java
+ Auteur(s)   : Bouyiatiotis - Gomes da Costa - Savary
  Date        : 05.04.2019
 
- But         : case régulière de jeux du board
+ But         : Case Départ du board
 
- Remarque(s) :
-
- Compilateur : MinGW-g++ 6.3.0
  -----------------------------------------------------------------------------------
  */
 
 public class GoSquare extends Square{
 
     /**
-     * @brief       : constructeur à 1 paramètre
-     * @param name   : String, nom de la case
+     * Constructeur à 1 paramètre
+     * @param name : String, nom de la case
      */
     public GoSquare(String name){
         super(name);
     }
 
+    /**
+     * Ajoute 200 d'argent au joueur
+     * @param p : game.Player, joueur qui a attérit sur la case
+     */
     public void landedOn( Player p){
         p.addCash(200);
     }
