@@ -33,7 +33,7 @@ public class PlayerTest {
     }
 
     @Test
-    public void addCashSouldWork(){
+    public void addCashShouldWork(){
         p1.addCash(300);
         p2.addCash(200);
 
@@ -42,11 +42,20 @@ public class PlayerTest {
     }
 
     @Test
-    public void reduceCashSouldWork(){
+    public void reduceCashShouldWork(){
         p1.reduceCash(300);
         p2.reduceCash(200);
 
         assertEquals(1200, p1.getNetWorth());
         assertEquals(1300, p2.getNetWorth());
+    }
+
+    @Test
+    public void cantBeUnderZero(){
+        p1.reduceCash(3000);
+        p2.reduceCash(2000);
+
+        assertEquals(0, p1.getNetWorth());
+        assertEquals(0, p2.getNetWorth());
     }
 }
